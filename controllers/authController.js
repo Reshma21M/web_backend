@@ -42,7 +42,7 @@ export const register = async (req, res) => {
             subject: 'Welcome to our Cakely',
             text: `Welcome to our website. Your account has been created with emai id ${email}` 
         }
-        await transporter
+        await transporter.sendMail(mailOptions);
 
         return res.json({success:true})
 
@@ -111,3 +111,4 @@ export const logout = async (req, res) => {
         res.json({success:false, message:error.message})
     }
 }
+
