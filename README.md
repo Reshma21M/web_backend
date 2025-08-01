@@ -1,6 +1,6 @@
-# 🍰 Cakely - Backend
+# 🎂 Cakely - Backend
 
-Cakely is a secure authentication service that provides user registration, login, email verification, password reset, and role-based access control (RBAC). This backend exposes RESTful APIs and is built following clean code architecture and security best practices.
+Welcome to Cakely Backend! 🍰 This service powers the modern cake ordering platform with secure and scalable RESTful APIs. It handles user authentication, authorization, cake management, and all core business logic, enabling a seamless and secure experience for both customers and admins.
 
 ## 🔧 Technologies Used
 
@@ -67,9 +67,7 @@ cakely-backend/
 ├── routes/
 ├── services/
 ├── middlewares/
-├── utils/
 ├── config/
-├── tests/
 ├── swagger.js
 └── server.js
 ```
@@ -95,5 +93,13 @@ cakely-backend/
     9. Environment configuration with .env
 
     10. Logging (console-based)
+
+---
+
+## 🔗 Backend Link
+
+- **Frontend Repository:** [Cakely Frontend](https://github.com/ThasuniInduma/web_frontend)
+
+---
 
 ### 🔐 Thanks for diving into Cakely Backend! ⚙️ Secure coding and smooth API rides ahead! 🚀🛠️
