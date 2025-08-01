@@ -37,7 +37,7 @@ export const register = async (req, res) => {
 
         //sending welcome email
         const mailOptions = {
-            from: process.env.SENDER_EMAIL,
+            from: `"Cakely" <${process.env.SENDER_EMAIL}>`,
             to: email,
             subject: 'Welcome to our Cakely',
             text: `Welcome to our website. Your account has been created with email id: ${email}` 
@@ -131,7 +131,7 @@ export const sendVerifyOtp = async (req,res) => {
        await user.save();
 
        const mailOption = {
-        from: process.env.SENDER_EMAIL,
+        from: `"Cakely" <${process.env.SENDER_EMAIL}>`,
         to: user.email,
         subject: 'Account Vercation OTP',
         text: `Your OTP is ${otp}. Verify your account using this OTP` 
@@ -222,7 +222,7 @@ export const sendResetOtp = async (req, res) => {
         await user.save();
 
         const mailOption = {
-            from: process.env.SENDER_EMAIL,
+            from: `"Cakely" <${process.env.SENDER_EMAIL}>`,
             to: user.email,
             subject: 'Password Reset OTP',
             text: `Your OTP for resetting your password is ${otp}. Reset your account using this OTP` 
