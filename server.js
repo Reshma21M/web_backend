@@ -15,20 +15,10 @@ connectDB();
 app.use(express.json());
 app.use(cookieParser());
 
-// ✅ CORS FIX
 app.use(cors({
   origin: 'https://cake-ly.netlify.app',
   credentials: true,
 }));
-
-// ✅ Manual headers for cookies + CORS
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://cake-ly.netlify.app');
-  res.header('Access-Control-Allow-Credentials', 'true');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 app.get('/', (req, res) => res.send("API working"));
