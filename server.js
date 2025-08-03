@@ -19,6 +19,13 @@ app.use(cookieParser());
 app.use(cors({origin: allowedOrigins, credentials: true}));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://cake-ly.netlify.app', // Replace with actual frontend domain
+  credentials: true,
+}));
+
 app.get('/', (req, res) => res.send("API working"))
 app.use('/api/auth', authRouter)
 app.use('/api/user', userRouter)
