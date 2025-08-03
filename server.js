@@ -12,17 +12,16 @@ const app = express();
 const port = process.env.PORT || 4000
 connectDB();
 
-const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = ['https://cake-ly.netlify.app'];
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({origin: allowedOrigins, credentials: true}));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
-const cors = require('cors');
 
 app.use(cors({
-  origin: 'https://cake-ly.netlify.app', // Replace with actual frontend domain
+  origin: allowedOrigins, // Replace with actual frontend domain
   credentials: true,
 }));
 
